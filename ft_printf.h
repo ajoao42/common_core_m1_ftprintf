@@ -22,7 +22,7 @@
 int	ft_printf(const char *format, ...);
 int	ft_print_chr(char c);
 int	ft_print_str(char *str);
-int	ft_print_hex(unsigned int i, char c);
+int	ft_print_hex(unsigned int i, const char c);
 int	ft_print_undec(unsigned int nbr);
 int	ft_print_int(int nbr);
 int	ft_print_ptr(void *ptr);
