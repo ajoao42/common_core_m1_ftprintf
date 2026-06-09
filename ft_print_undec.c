@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static void	ft_check_nbr(unsigned int nbr)
+static void	ft_check_nbr(int nbr)
 {
 	if (nbr == -2147483648)
 	{
@@ -42,6 +42,7 @@ int	ft_print_undec(unsigned int nbr)
 	unsigned int	i;
 
 	i = 1;
+	ft_check_nbr(nbr);
 	while (nbr > 9)
 	{
 		nbr = nbr / 10;
@@ -49,8 +50,6 @@ int	ft_print_undec(unsigned int nbr)
 	}
 	return (i);
 }
-//ft_check_nbr(nbr); was removed from 44 line after
-
 /*
 int main(void)
 {
