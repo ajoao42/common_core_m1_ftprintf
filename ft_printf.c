@@ -12,20 +12,24 @@
 
 #include "ft_printf.h"
 
-static int	ft_check_type(char type, va_list va_lst)
+static int	ft_check_type(const char *type, va_list va_lst)
 {
-	if (type == 'c')
-		return (ft_print_chr(va_arg(va_lst, int)));
-	else if (type == 's')
-		return (ft_print_str(va_arg(va_lst, char *)));
-	else if (type == 'x' || type == 'X')
-		return (ft_print_hex(va_arg(va_lst, unsigned int), type));
-	else if (type == 'i' || type == 'd')
-		return (ft_print_int(va_arg(va_lst, int)));
-	else if (type == 'u')
-		return (ft_print_undec(va_arg(va_lst, unsigned int)));
-	else if (type == '%')
-		return (ft_print_chr('%'));
+	int	i;
+
+	i = 0;
+	if (*type == 'c')
+		i += (ft_print_chr(va_arg(va_lst, int)));
+	else if (*type == 's')
+		i += (ft_print_str(va_arg(va_lst, char *)));
+	else if (*type == 'x' || *type == 'X')
+		i += (ft_print_hex(va_arg(va_lst, unsigned int), *type));
+	else if (*type == 'i' || *type == 'd')
+		i += (ft_print_int(va_arg(va_lst, int)));
+	else if (*type == 'u')
+		i += (ft_print_undec(va_arg(va_lst, unsigned int)));
+	else if (*type == '%')
+		i += (ft_print_chr('%'));
+	return (i);
 }
 
 int	ft_printf(const char *format, ...)
@@ -40,7 +44,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (ft_chr("cspdiuxX", *format))
+			if (ft_strchr("cspdiuxX", *format))
 				i += ft_check_type(format, va_arg(va_lst, void *));
 			else if (*format == '%')
 				i += ft_print_chr('%');
