@@ -6,7 +6,7 @@
 /*   By: ajoao <ajoao@student.42lisboa.com>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/05/13 16:59:31 by ajoao            #+#    #+#              */
-/*   Updated: 2026/06/10 16:01:00 by ajoao           ###   ########.fr        */
+/*   Updated: 2026/06/10 17:29:21 by ajoao           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	ft_print_int(int nbr)
 	if (nbr < 0)
 	{
 		i += 1;
+		ft_print_chr('-');
 		un = (unsigned int)(-(long) nbr);
 	}
 	else
@@ -29,6 +30,7 @@ int	ft_print_int(int nbr)
 		i += (ft_print_int(un / 10) + 1);
 	else
 		i += 1;
+	ft_print_chr((un % 10) + '0');
 	return (i);
 }
 /*
