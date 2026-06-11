@@ -22,8 +22,8 @@ libftprintf.a
 
 This library can be reused in future C projects whenever formatted output is required.
 
----
 
+---
 ### Features
 
 The mandatory implementation supports the following conversion specifiers:
