@@ -41,8 +41,8 @@ The mandatory implementation supports the following conversion specifiers:
 | `%%`      | Percent sign             |
 
 The bonus part was not implemented.
----
 
+---
 ### Project Structure
 
 | File                | Description                         |
