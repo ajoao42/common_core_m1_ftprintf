@@ -1,4 +1,4 @@
-# *This project has been created as part of the 42 curriculum by ajoao*
+# *This project has been created as part of the 42 curriculum by ajoao.*
 
 ## Description
 
@@ -24,7 +24,7 @@ This library can be reused in future C projects whenever formatted output is req
 
 ---
 
-## Features
+### Features
 
 The mandatory implementation supports the following conversion specifiers:
 
@@ -43,7 +43,7 @@ The mandatory implementation supports the following conversion specifiers:
 The bonus part was not implemented.
 ---
 
-## Project Structure
+### Project Structure
 
 | File                | Description                         |
 | ------------------- | ----------------------------------- |
@@ -70,9 +70,9 @@ ft_printf/
 
 ---
 
-## Algorithm and Data Structure Choices
+### Algorithm and Data Structure Choices
 
-### Overall Algorithm
+#### Overall Algorithm
 
 The implementation follows a **linear parsing algorithm**.
 
@@ -88,7 +88,7 @@ The implementation follows a **linear parsing algorithm**.
 4. Continue until the end of the format string.
 5. Return the total number of printed characters.
 
-### Why This Algorithm?
+#### Why This Algorithm?
 
 A linear parser was chosen because:
 
@@ -137,7 +137,7 @@ Example for hexadecimal conversion:
 
 This approach naturally prints digits in the correct order without requiring additional data structures such as stacks or linked lists.
 
-### Complexity Analysis
+#### Complexity Analysis
 
 | Operation              | Complexity |
 | ---------------------- | ---------- |
@@ -192,7 +192,7 @@ make re     # rebuild project
 
 ---
 
-## Usage
+### Usage
 
 Include the header:
 
@@ -230,7 +230,7 @@ Hex: ff
 
 ---
 
-## Testing
+### Testing
 
 The project can be tested by comparing outputs with the original `printf()`.
 
